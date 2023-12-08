@@ -31,8 +31,8 @@ export default function Home() {
           <div className="text-center justify-center">
             <h1 className="text-4xl  md:pt-20 font-bold pb-10 tracking-tight text-green-700 sm:text-6xl">Crop Connect
             </h1>
-            <span className="text-2xl md:text-3xl pb-20 glow">Building the farmers for the next generation. It helps the farmers with the supplychain management, getting identity and apply for the loans.</span> 
-            <Link href="/">
+            <span className="text-2xl md:text-3xl pb-20 glow">Building the farmers for the next generation. It helps the farmers with the supplychain management,getting identity and apply for the loans.</span> 
+            <Link href="/Applyloan">
               <button className="btn-grad3 mt-15 md:mt-8 ">Get Started</button>
             </Link>
           </div>
