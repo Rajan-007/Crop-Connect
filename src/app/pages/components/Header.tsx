@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link";
 import React, { Provider, useContext, useEffect } from "react";
 import useDarkMode from "use-dark-mode";
@@ -11,7 +10,7 @@ import detectProvider from "@metamask/detect-provider";
 import Web3 from "web3";
 import truncateEthAddress from "truncate-eth-address";
 import { useState } from "react";
-import { Web3Context } from "../../config/Web3Context";
+import { Web3Context } from "web3";
 // Now you can use 'localStorage' with the 'any' type.
 import { ethers } from "ethers";
 import { Web3Provider } from "@ethersproject/providers";

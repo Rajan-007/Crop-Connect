@@ -1,12 +1,13 @@
+"use client"
 import Image from "next/image";
 import logo from "../Assets/logo.png"
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Head from 'next/head';
-// import {BsWhatsapp} from "react-icons/bs"
+import {BsWhatsapp} from "react-icons/bs"
 
 
-const Header = dynamic(() => import('./pages/components/Header'), {
+const Header = dynamic(() => import('../app/pages/components/Header'), {
   ssr: false,
 })
 interface TileProps {
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <main className="bg-[url('https://uploads-ssl.webflow.com/63d3d2c7912bc75b5030c7ad/63d3d2c7912bc757f330c817_bg-home-repeat.jpg')]">
        <Head>
-        <title>Crop Connect</title>
+        <title>Green-DAO</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -29,11 +30,12 @@ export default function Home() {
         <div className="mx-auto max-w-3xl pt-20 sm:py-48 lg:py-[80px]">
          
           <div className="text-center justify-center">
-            <h1 className="text-4xl  md:pt-20 font-bold pb-10 tracking-tight text-green-700 sm:text-6xl">Crop Connect
+            <h1 className="text-4xl  md:pt-20 font-bold pb-10 tracking-tight text-green-700 sm:text-6xl">
+            Crop Connect
             </h1>
-            <span className="text-2xl md:text-3xl pb-20 glow">Building the farmers for the next generation. It helps the farmers with the supplychain management,getting identity and apply for the loans.</span> 
-            <Link href="/Applyloan">
-              <button className="btn-grad3 mt-15 md:mt-8 ">Get Started</button>
+            <span className="text-2xl md:text-3xl pb-20 glow">Building the farmers for the next generation. Its an DAO to help the farmers with the supplychain management, getting identity and apply for the loans.</span> 
+            <Link href="/ApplyLoan">
+            <button className="btn-grad3 mt-15 md:mt-8 ">Get Started</button>
             </Link>
           </div>
         </div>
@@ -43,7 +45,7 @@ export default function Home() {
           Follow us on Twitter, Insta
         </h3>
         <h3 className="text-center md:text-lg text-white mb-4 sm:mb-0">
-          Made with 💚 by <span className="font-bold text-green-300">Gryffindors Green</span>
+          Made with 💚 by <span className="font-bold text-green-300">Green-DAO</span>
         </h3>
         <h3 className="text-center md:text-lg text-green-300">Copyrights @ 2023</h3>
       </div>
@@ -53,6 +55,7 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
       >
+        <BsWhatsapp className="fa mt-2 fa-whatsapp" />
       </a>
 
     </main>
