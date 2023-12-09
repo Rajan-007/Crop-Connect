@@ -4,19 +4,48 @@ import logo from "../Assets/logo.png"
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Head from 'next/head';
-import {BsWhatsapp} from "react-icons/bs"
+// import { ConnectButton } from '@rainbow-me/rainbowkit';
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';
+import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+import {
+  avalancheFuji,
+  polygon,
+  
+} from 'wagmi/chains';
+// import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
 
-
-const Header = dynamic(() => import('../app/pages/components/Header'), {
-  ssr: false,
-})
-interface TileProps {
-  description: string;
-  title: string;
-  icon: string;
-}
 
 export default function Home() {
+  const { chains, publicClient } = configureChains(
+    [ avalancheFuji],
+    [
+      publicProvider()
+    ]
+  );
+  const { connectors } = getDefaultWallets({
+    appName: 'Crop Connect',
+    projectId: 'CTC',
+    chains
+  });
+  const wagmiConfig = createConfig({
+    autoConnect: true,
+    connectors,
+    publicClient
+  })
+  
+  const Header = dynamic(() => import('../app/pages/components/Header'), {
+    ssr: false,
+  })
+  interface TileProps {
+    description: string;
+    title: string;
+    icon: string;
+  }  
   return (
     <main className="bg-[url('https://uploads-ssl.webflow.com/63d3d2c7912bc75b5030c7ad/63d3d2c7912bc757f330c817_bg-home-repeat.jpg')]">
        <Head>
@@ -45,7 +74,7 @@ export default function Home() {
           Follow us on Twitter, Insta
         </h3>
         <h3 className="text-center md:text-lg text-white mb-4 sm:mb-0">
-          Made with 💚 by <span className="font-bold text-green-300">Green-DAO</span>
+          Made with 💚 by <span className="font-bold text-green-300">Crop Connect</span>
         </h3>
         <h3 className="text-center md:text-lg text-green-300">Copyrights @ 2023</h3>
       </div>

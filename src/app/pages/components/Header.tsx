@@ -1,3 +1,4 @@
+"use client "
 import Link from "next/link";
 import React, { Provider, useContext, useEffect } from "react";
 import useDarkMode from "use-dark-mode";
@@ -6,14 +7,32 @@ import Image from "next/image";
 import { Dialog } from "@headlessui/react";
 import { AiOutlineBars } from "react-icons/ai";
 import { HiXMark } from "react-icons/hi2";
-import detectProvider from "@metamask/detect-provider";
-import Web3 from "web3";
-import truncateEthAddress from "truncate-eth-address";
+// import detectProvider from "@metamask/detect-provider";
+// import Web3 from "web3";
+// import truncateEthAddress from "truncate-eth-address";
 import { useState } from "react";
 import { Web3Context } from "web3";
 // Now you can use 'localStorage' with the 'any' type.
 import { ethers } from "ethers";
-import { Web3Provider } from "@ethersproject/providers";
+// import { Web3Provider } from "@ethersproject/providers";
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';
+import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+import {
+  mainnet,
+  polygon,
+  optimism,
+  arbitrum,
+  base,
+  zora,
+} from 'wagmi/chains';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 // import { localStorage } from "localStorage";
 const Header = () => {
   const { address, isConnected } = useAccount();
@@ -21,45 +40,45 @@ const Header = () => {
   const [connected, setConnected] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    connectToWeb3();
-  }, []);
+  // useEffect(() => {
+  //   connectToWeb3();
+  // }, []);
 
-  const getWeb3 = async (): Promise<Web3Provider | null> => {
-    if (typeof window.ethereum !== "undefined") {
-      try {
-        await (window.ethereum as any).request({
-          method: "eth_requestAccounts",
-        });
-        const provider = new ethers.providers.Web3Provider(
-          window.ethereum as ethers.providers.ExternalProvider
-        );
-        return provider;
-      } catch (error) {
-        // Handle error connecting to the Ethereum provider
-        console.error("Error connecting:", error);
-        return null;
-      }
-    } else {
-      return null;
-    }
-  };
+  // const getWeb3 = async (): Promise<Web3Provider | null> => {
+  //   if (typeof window.ethereum !== "undefined") {
+  //     try {
+  //       await (window.ethereum as any).request({
+  //         method: "eth_requestAccounts",
+  //       });
+  //       const provider = new ethers.providers.Web3Provider(
+  //         window.ethereum as ethers.providers.ExternalProvider
+  //       );
+  //       return provider;
+  //     } catch (error) {
+  //       // Handle error connecting to the Ethereum provider
+  //       console.error("Error connecting:", error);
+  //       return null;
+  //     }
+  //   } else {
+  //     return null;
+  //   }
+  // };
 
-  const connectToWeb3 = async (): Promise<void> => {
-    try {
-      const web3 = await getWeb3();
-      if (web3) {
-        const accounts = await web3.listAccounts();
-        setAccounts(accounts);
-        setConnected(true);
-      } else {
-        // Handle case where web3 is not available
-      }
-    } catch (error) {
-      // Handle error connecting to web3
-      console.error("Error connecting:", error);
-    }
-  };
+  // const connectToWeb3 = async (): Promise<void> => {
+  //   try {
+  //     const web3 = await getWeb3();
+  //     if (web3) {
+  //       const accounts = await web3.listAccounts();
+  //       setAccounts(accounts);
+  //       setConnected(true);
+  //     } else {
+  //       // Handle case where web3 is not available
+  //     }
+  //   } catch (error) {
+  //     // Handle error connecting to web3
+  //     console.error("Error connecting:", error);
+  //   }
+  // };
   // const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
   // const { ethereum } = isBrowser();
   // if (ethereum) {
@@ -116,9 +135,27 @@ const Header = () => {
   if (typeof window !== "undefined") {
     localStorage.setItem("walletaddress", address || "");
   }
+
+const { chains, publicClient } = configureChains(
+  [ polygon, arbitrum, base],
+  [
+    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
+    publicProvider()
+  ]
+);
+const { connectors } = getDefaultWallets({
+  appName: 'CropConnect',
+  projectId: 'CPC',
+  chains
+});
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors,
+  publicClient
+})
   return (
-    <Web3Context.Provider value={Web3}>
-      <header className="absolute inset-x-0 top-0 z-50">
+  <WagmiConfig config={wagmiConfig}>
+      <RainbowKitProvider chains={chains}>      <header className="absolute inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
@@ -183,12 +220,7 @@ const Header = () => {
                 </button>
               </>
             ) : (
-              <button
-                className="text-md btn-grad pt-2 font-bold text-white"
-                onClick={handleConnect}
-              >
-                Connect
-              </button>
+              <ConnectButton />
             )}
           </div>
         </nav>
@@ -274,7 +306,8 @@ const Header = () => {
           </Dialog.Panel>
         </Dialog>
       </header>
-    </Web3Context.Provider>
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 };
 
