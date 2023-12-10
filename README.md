@@ -1,4 +1,4 @@
-# Green DAO
+# Crop Connect
 ## Abstract:
 Blockchains play a vital role in FARMER to track and trace the origin of food products in food supply chain. Supply Chain Management (SCM) is an essential business process in all spheres of the economy. SCM uses speciﬁc processes to connect from producer to consumer requirement through a chain. In a BCT(Blockchain Technology) based system, “records are immutable and trusted, eliminating the need for third parties to be involved. Potential farmer-facing impacts include ensuring that farmers receive timely and complete payments through the use of smart contracts and helping farmers to capture real-time data to more effectively manage their crops and harvests. Another beneﬁt of using BCT in FARMER is security where hacking or tampering the existing data is impossible by any intermediary. Artificial Intelligence also plays a major in role in Suggestions, recommendation and removing sensitive contents of our web application. And also we create a platform for learn farming to increase FARMER productivity to our society. As some farmers may illiterate we integrate and support via whatsapp bot with Indian cultural.
 <br/>
@@ -55,9 +55,9 @@ To build this solution, the following steps would be required:
 ## Tech Stack:
 1. FrontEND: NextJS
 2. BackEND:  Solidity, DynamoDB.
-3. Framework: Tailwindcss, React-icons, MaterialUI, Biconomy, Filecoin, Hyperlane, 5irechain, CELO
-4. Technologies: Blockchain, Cloud (AWS).
-5. UseCases: We use Biconomy Social-Auth to connect web2 user to web3. As farmers has no idea regards wallet it will be the gateway to them. We use Push protocols to notify each step to step progress updation. And the Filecoin blockchain records transactions to provide verification of file storage 
+3. Framework: Tailwindcss
+4. Technologies: Blockchain
+5. UseCases: As farmers has no idea regards wallet it will be the gateway to them. We use Push protocols to notify each step to step progress updation. And the Filecoin blockchain records transactions to provide verification of file storage 
 
 # To run our project:
  Markup :
@@ -66,10 +66,10 @@ To build this solution, the following steps would be required:
 
 
 ## Presentation Link:
-https://www.canva.com/design/DAFkvK-pbFY/4KiaVQ6Gbw3oc8nGIoenTw/edit?utm_content=DAFkvK-pbFY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+https://www.canva.com/design/DAF2gUZSiTg/MPzipiRgPkr8cv6U_vbn2w/edit?utm_content=DAF2gUZSiTg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## Youtube Link;
-https://youtu.be/xuxNUpk5qfo
+https://youtu.be/UIjksp5bGy0?si=SFRgeIA1YfT4C_fV
 
 ## deployed Link:
 https://green-dao-icp.vercel.app/
