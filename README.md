@@ -60,12 +60,27 @@ To build this solution, the following steps would be required:
 
 ## Bounties that we attempted to cover :
 
-## Deployed address:
+## Celo Deployment
 
-1. Scroll - 0x88a033c3ECe6fF823766cbed246D003Bdfa1D490
-2. Celo - 0x74e3954De669872A20652f1D6508f71108553c9e
+![image](https://github.com/Rajan-007/Crop-Connect/assets/103201642/cb9387cc-ffc9-4060-b49a-12e08853a225)
+
+0x74e3954De669872A20652f1D6508f71108553c9e
+
+## Polygon Deployment
+
+![image](https://github.com/Rajan-007/Crop-Connect/assets/103201642/7df44691-2419-4426-8bbd-7512e5964100)
+
+0x90aE959D61cD962EaD4c79E78aB86f5166452B62
+
+## Scroll Deployment
+
+![image](https://github.com/Rajan-007/Crop-Connect/assets/103201642/e7d4fb0e-26ce-451c-b056-8b50d951d804)
+
+0x88a033c3ECe6fF823766cbed246D003Bdfa1D490
+
+ 
 3. Base - 0x08200018C8C68657C6A0823CC2052f536007CDd6
-4. Polygon - 0x90aE959D61cD962EaD4c79E78aB86f5166452B62
+ 
 
 
 ## Presentation Link:
