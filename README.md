@@ -55,7 +55,17 @@ To build this solution, the following steps would be required:
 # To run our project:
  Markup :
 1. npm i --legacy-peer-deps
-2. npm run dev 
+2. npm run dev
+
+
+## Bounties that we attempted to cover :
+
+## Deployed address:
+
+1. Scroll - 0x88a033c3ECe6fF823766cbed246D003Bdfa1D490
+2. Celo - 0x74e3954De669872A20652f1D6508f71108553c9e
+3. Base - 0x08200018C8C68657C6A0823CC2052f536007CDd6
+4. Polygon - 0x90aE959D61cD962EaD4c79E78aB86f5166452B62
 
 
 ## Presentation Link:
