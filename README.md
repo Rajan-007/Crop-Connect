@@ -68,8 +68,11 @@ https://youtu.be/UIjksp5bGy0?si=SFRgeIA1YfT4C_fV
 https://green-dao-icp.vercel.app/
 
 ## Screenshots
-![WhatsApp Image 2023-12-10 at 08 18 16_9d30031b](https://github.com/Rajan-007/Crop-Connect/assets/103201642/dc0bfa6d-4c0e-43d7-b318-4fd76c6747b8)
+![WhatsApp Image 2023-12-10 at 07 15 03_218c76e5](https://github.com/Rajan-007/Crop-Connect/assets/103201642/4a98e42e-80d2-47a8-ae49-c3ede28e20a9)
+![WhatsApp Image 2023-12-10 at 08 18 16_9d30031b](https://github.com/Rajan-007/Crop-Connect/assets/103201642/0be90c14-ec8b-4c76-a030-0c0ea7ef1213)
+![WhatsApp Image 2023-12-10 at 08 01 06_76a5d159](https://github.com/Rajan-007/Crop-Connect/assets/103201642/8b49679c-95f1-463f-8f58-9255d782ce00)
+![WhatsApp Image 2023-12-10 at 08 01 07_257f8024](https://github.com/Rajan-007/Crop-Connect/assets/103201642/a8f5d86f-48c1-414b-96c7-8494246aaee0)
 
-![image](https://github.com/vmmuthu31/Green-DAO-ICP/assets/88650559/13132ec5-351d-4fbd-9b9e-30f8977a3c9a)
+
 
 
