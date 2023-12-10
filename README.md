@@ -6,13 +6,6 @@ Building the farmers for the next generation. Its an DAO to help the farmers wit
 <br/>
 It is a multichain application it is currently live in polygon and flow blockchain network.
 
-## Existing Apps:
-1. 1 EDI Source.
-2. Kinetic. 
-3. Netstock.
-4. NetSuite. Highly viewed <br/>
-These are the few apps that only focus on the SCM but not to make familiar with farmer and industry.
-
 ## Our Feature:
 Not only SCM is our only motto, but also building a Learning Platform to increase terrace farming or individual farming, Suggestion, recommendation and removing sensitive contents, Multilingual Support, Whatsapp Support, Funds Section. The State of Government of Tamil Nadu, Telegana, Karnataka and few more states are giving loans with lower interest only when farmers production limit is above 100kgs. We gonna make a proof of work of the production as soul nfts to avoid the scam generation. We are taking survey with the farmers to build our apps. Our goal to increase farmers productivity and human power to sustain them in economic. This would work for b2b marketing strategies. 
 ### Proposing Features:
