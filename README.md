@@ -94,8 +94,16 @@ To build this solution, the following steps would be required:
 ## Base Deployment
 
  ![image](https://github.com/Rajan-007/Crop-Connect/assets/103201642/27a2e1c1-b560-49f5-bad7-f635b3219ae0)
+ 
 
 0x08200018C8C68657C6A0823CC2052f536007CDd6
+
+## Arbitrum
+
+![image](https://github.com/Rajan-007/Crop-Connect/assets/103201642/306f307d-734b-4510-82b7-4f953860e0fd)
+
+0x88a033c3ECe6fF823766cbed246D003Bdfa1D490
+
  
 
 
